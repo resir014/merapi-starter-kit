@@ -1,0 +1,42 @@
+schema: kata.ai/schema/merapi/1.0
+
+# package metadata
+name: ${package.name}
+version: ${package.version}
+
+# load the plugins that we want to use
+plugins:
+  - express
+
+# define our main component
+main: main
+
+# register our service's components
+components:
+  # main
+  main: Main
+
+  # controllers
+  indexController: controllers/indexController
+  dummyController: controllers/dummyController
+
+  # web endpoint
+  app:
+    type: express
+
+# server configuration
+app:
+  host: 127.0.0.1
+  port: ${$PORT}
+
+  # define our service's routes
+  routes:
+    GET /:
+      - dummyController.ok
+    GET /info:
+      - dummyController.ok
+    /api/v1:
+      GET /hello:
+        - indexController.hello
+      GET /hello/:toWho:
+        - indexController.helloWithParams

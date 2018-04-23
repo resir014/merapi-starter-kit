@@ -1,0 +1,38 @@
+{
+  "name": "merapi-starter-kit",
+  "version": "1.0.0",
+  "description": "An example endpoint built using Merapi, the JavaScript framework for microservices made by Kata.ai",
+  "main": "start.js",
+  "repository": "https://github.com/resir014/merapi-starter-kit.git",
+  "author": "Resi Respati <resi@kata.ai>",
+  "license": "Unlicense",
+  "private": true,
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rimraf ./lib",
+    "debug": "npm run build && npm run watch-debug",
+    "prewatch": "npm run build",
+    "start": "npm run build && node start.js",
+    "serve-debug": "nodemon --inspect=[host]:[port] start.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"nodemon start.js -w ./lib\"",
+    "watch-ts": "tsc -w"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/node": "^9.6.6",
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.3",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.9.1",
+    "tslint-config-kata": "^1.0.4",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "js-yaml": "^3.11.0",
+    "merapi": "^0.19.3",
+    "merapi-plugin-express": "^0.5.0"
+  }
+}
