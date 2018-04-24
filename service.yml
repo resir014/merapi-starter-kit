@@ -35,6 +35,8 @@ app:
       - dummyController.ok
     GET /info:
       - dummyController.ok
+
+    # subroutes example
     /api/v1:
       GET /hello:
         - indexController.hello
