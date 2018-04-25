@@ -40,4 +40,26 @@ Your server now lives at the port that you set on your `.env` file (defaults to 
 
 ## Deploying
 
-_Coming soon!_
+###
+
+If you use [now](https://zeit.co/now), this repository is instantly deployable. Just click the
+button below.
+
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/resir014/merapi-starter-kit)
+
+Now has its own way to manage environment variables and deployment secrets. To learn more about it,
+[follow this guide](https://zeit.co/docs/features/env-and-secrets).
+
+Once you've created a secret through the Now CLI, include it in your `now.json` as follows:
+
+```json
+{
+  "env": {
+    "ENV_VARIABLE": "@secret-name"
+  }
+}
+```
+
+---
+
+More deployment guides for different environemnt will be made available when needed.
