@@ -1,5 +1,6 @@
 {
   "name": "merapi-starter-kit",
+  "alias": ["merapi-starter-kit"],
   "env": {
     "APP_HOST": "@merapi-host",
     "APP_PORT": "@merapi-port"
