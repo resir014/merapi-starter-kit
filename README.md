@@ -37,3 +37,7 @@ Your server now lives at the port that you set on your `.env` file (defaults to 
 * `GET /` (and `GET /info`) - simple healthcheck
 * `GET /api/v1/hello` - returns a JSON payload with hello message
 * `GET /api/v1/hello/:toWho` - same as above, but with a customisable param
+
+## Deploying
+
+_Coming soon!_
