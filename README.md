@@ -62,4 +62,4 @@ Once you've created a secret through the Now CLI, include it in your `now.json` 
 
 ---
 
-More deployment guides for different environemnt will be made available when needed.
+More deployment guides for other environments will be made available when needed.
